@@ -14,7 +14,7 @@ within a docker compose.
 It's highly recommend to use http-dump docker image.
 
 ```console
-$ docker run --rm -p "8080:8080" -it daime/http-dump:latest 
+$ docker run --rm -p "8080:8080" -it matthewvbehnke/http-dump
 ```
 
 ## Build
