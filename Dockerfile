@@ -6,9 +6,11 @@ COPY main.go .
 
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o http-dump .
 
-FROM marcosmorelli/debian-base-image
+FROM alpine
 
-WORKDIR /root/
+USER 1000
+
+WORKDIR /opt/http-dump/
 
 COPY --from=0 /go/src/github.com/daime/http-dump/http-dump .
 
